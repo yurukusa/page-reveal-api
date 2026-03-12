@@ -592,6 +592,61 @@ window.addEventListener('pagereveal', (e) =&gt; {
   </div>
 </section>
 
+<!-- Reference Section -->
+<section style="padding:24px;max-width:1200px;margin:0 auto">
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px">
+    <h3 style="font-size:15px;font-weight:600;margin-bottom:16px">API Reference</h3>
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border)">
+            <th style="text-align:left;padding:10px;color:var(--text-dim);font-size:11px;text-transform:uppercase">API</th>
+            <th style="text-align:left;padding:10px;color:var(--text-dim);font-size:11px;text-transform:uppercase">Type</th>
+            <th style="text-align:left;padding:10px;color:var(--text-dim);font-size:11px;text-transform:uppercase">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:10px"><code style="color:var(--cyan)">pagereveal</code></td>
+            <td style="padding:10px;color:var(--text-dim)">Window event</td>
+            <td style="padding:10px;color:var(--text-dim)">Fires when a page is first rendered after cross-document navigation. The event has a viewTransition property if a view transition is active.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:10px"><code style="color:var(--cyan)">pageswap</code></td>
+            <td style="padding:10px;color:var(--text-dim)">Window event</td>
+            <td style="padding:10px;color:var(--text-dim)">Fires on the old page just before it is replaced. Use to customize exit animations based on destination URL.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:10px"><code style="color:var(--cyan)">@view-transition</code></td>
+            <td style="padding:10px;color:var(--text-dim)">CSS at-rule</td>
+            <td style="padding:10px;color:var(--text-dim)">Opts a document into cross-document view transitions. Required on both source and destination pages.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:10px"><code style="color:var(--cyan)">::view-transition-old(name)</code></td>
+            <td style="padding:10px;color:var(--text-dim)">CSS pseudo-element</td>
+            <td style="padding:10px;color:var(--text-dim)">The captured snapshot of the old page or named element. Animate this for exit effects.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:10px"><code style="color:var(--cyan)">::view-transition-new(name)</code></td>
+            <td style="padding:10px;color:var(--text-dim)">CSS pseudo-element</td>
+            <td style="padding:10px;color:var(--text-dim)">The live rendering of the new page or named element. Animate this for entry effects.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:10px"><code style="color:var(--cyan)">view-transition-name</code></td>
+            <td style="padding:10px;color:var(--text-dim)">CSS property</td>
+            <td style="padding:10px;color:var(--text-dim)">Assigns a name to an element for shared element transitions. Names must be unique per page.</td>
+          </tr>
+          <tr>
+            <td style="padding:10px"><code style="color:var(--cyan)">e.viewTransition.types</code></td>
+            <td style="padding:10px;color:var(--text-dim)">Set&lt;string&gt;</td>
+            <td style="padding:10px;color:var(--text-dim)">Add type strings to apply different CSS animations via :active-view-transition-type(name).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 <footer>
   <a href="https://yurukusa.github.io/dev-toolkit/">Dev Toolkit</a> — Page Reveal API Playground
 </footer>
